@@ -36,10 +36,10 @@ export default function Home() {
       {/* Stats */}
       <section className="mx-auto mt-10 mb-12 grid max-w-6xl gap-6 px-6 md:grid-cols-2 lg:grid-cols-4">
         {[
-          ["500+", "AI Tools"],
-          ["2M+", "Monthly Users"],
-          ["1000+", "Reviews"],
-          ["Daily", "Updated"],
+          ["6+", "AI Tools"],
+          ["5", "Categories"],
+          ["Free & Paid", "Tools"],
+          ["Regularly", "Updated"],
         ].map(([title, subtitle]) => (
           <div
             key={title}
@@ -93,7 +93,8 @@ export default function Home() {
             style={{ color: "var(--muted)" }}
           >
             <p>
-              Discover the most popular AI tools used by millions of people.
+              Discover useful AI tools for writing, images, video, coding,
+              productivity, and more.
             </p>
 
             <span
@@ -147,8 +148,8 @@ export default function Home() {
             className="mt-3"
             style={{ color: "var(--muted)" }}
           >
-            New AI tools are added regularly to help you stay updated with the
-            latest AI technology.
+            Explore useful AI tools and discover new technology regularly
+            added to ToolNova.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
