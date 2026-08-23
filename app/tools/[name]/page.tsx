@@ -4,6 +4,12 @@ import { tools } from "../../data/tools";
 import TrackRecentlyViewed from "../../components/TrackRecentlyViewed";
 import ReviewSection from "../../components/ReviewSection";
 
+const baseUrl = "https://toolnova-roan.vercel.app";
+
+function createToolSlug(name: string) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -12,28 +18,48 @@ export async function generateMetadata({
   const { name } = await params;
 
   const tool = tools.find(
-    (t) => t.name.toLowerCase().replace(/\s+/g, "-") === name
+    (t) => createToolSlug(t.name) === name
   );
 
   if (!tool) {
     return {
       title: "Tool Not Found",
+      description: "The requested AI tool could not be found on ToolNova.",
     };
   }
 
+  const toolUrl = `${baseUrl}/tools/${createToolSlug(tool.name)}`;
+
+  const description = `${tool.description} Explore features, pricing, rating, users and more on ToolNova.`;
+
   return {
-    title: tool.name,
-    description: tool.description,
+    title: `${tool.name} - AI Tool`,
+    description,
+
+    alternates: {
+      canonical: toolUrl,
+    },
 
     openGraph: {
-      title: tool.name,
-      description: tool.description,
+      title: `${tool.name} - AI Tool | ToolNova`,
+      description,
+      url: toolUrl,
+      siteName: "ToolNova",
+      locale: "en_US",
+      type: "website",
+      images: [
+        {
+          url: tool.logo,
+          alt: `${tool.name} logo`,
+        },
+      ],
     },
 
     twitter: {
       card: "summary_large_image",
-      title: tool.name,
-      description: tool.description,
+      title: `${tool.name} - AI Tool | ToolNova`,
+      description,
+      images: [tool.logo],
     },
   };
 }
@@ -46,7 +72,7 @@ export default async function ToolPage({
   const { name } = await params;
 
   const tool = tools.find(
-    (t) => t.name.toLowerCase().replace(/\s+/g, "-") === name
+    (t) => createToolSlug(t.name) === name
   );
 
   if (!tool) {
@@ -91,7 +117,7 @@ export default async function ToolPage({
             <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-white p-3">
               <img
                 src={tool.logo}
-                alt={tool.name}
+                alt={`${tool.name} logo`}
                 className="h-14 w-14 object-contain"
               />
             </div>
@@ -184,9 +210,7 @@ export default async function ToolPage({
                 .map((related) => (
                   <Link
                     key={related.id}
-                    href={`/tools/${related.name
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                    href={`/tools/${createToolSlug(related.name)}`}
                     className="rounded-xl border border-slate-700 bg-slate-800 p-4 transition hover:border-cyan-400"
                   >
                     <h3 className="font-bold">

@@ -1,4 +1,23 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Read the ToolNova Privacy Policy to learn how information submitted through the website may be collected, used and protected.",
+  alternates: {
+    canonical: "https://toolnova-roan.vercel.app/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | ToolNova",
+    description:
+      "Learn how ToolNova handles information and privacy on its AI tools directory website.",
+    url: "https://toolnova-roan.vercel.app/privacy-policy",
+    siteName: "ToolNova",
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (

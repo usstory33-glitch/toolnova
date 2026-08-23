@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-        },
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
 
-        sitemap: "https://toolnova.com/sitemap.xml",
-    };
+    sitemap: "https://toolnova-roan.vercel.app/sitemap.xml",
+  };
 }
