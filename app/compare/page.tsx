@@ -5,25 +5,30 @@ import Link from "next/link";
 import { tools } from "../data/tools";
 
 export default function ComparePage() {
-  const [tool1, setTool1] = useState("");
-  const [tool2, setTool2] = useState("");
+  const [tool1Id, setTool1Id] = useState("");
+  const [tool2Id, setTool2Id] = useState("");
 
-  const firstTool = tools.find((tool) => tool.name === tool1);
-  const secondTool = tools.find((tool) => tool.name === tool2);
+  const firstTool = tools.find(
+    (tool) => String(tool.id) === tool1Id
+  );
+
+  const secondTool = tools.find(
+    (tool) => String(tool.id) === tool2Id
+  );
 
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-10 text-white">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="mb-10 flex items-center justify-between">
+        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <h1 className="text-4xl font-bold">
             ⚖️ Compare AI Tools
           </h1>
 
           <Link
             href="/"
-            className="rounded-lg border border-cyan-500 px-4 py-2 text-cyan-400 transition hover:bg-cyan-500 hover:text-black"
+            className="w-fit rounded-lg border border-cyan-500 px-4 py-2 text-cyan-400 transition hover:bg-cyan-500 hover:text-black"
           >
             ← Back to Home
           </Link>
@@ -32,41 +37,100 @@ export default function ComparePage() {
         {/* Tool Selection */}
         <div className="mb-10 grid gap-6 md:grid-cols-2">
 
-          <select
-            value={tool1}
-            onChange={(e) => setTool1(e.target.value)}
-            className="rounded-xl border border-slate-700 bg-slate-900 p-4 text-white outline-none focus:border-cyan-400"
-          >
-            <option value="">Select First Tool</option>
+          {/* First Tool */}
+          <div>
+            <label
+              htmlFor="first-tool"
+              className="mb-2 block text-sm font-semibold text-slate-300"
+            >
+              Select First Tool
+            </label>
 
-            {tools.map((tool) => (
-              <option key={tool.id} value={tool.name}>
-                {tool.name}
+            <select
+              id="first-tool"
+              value={tool1Id}
+              onChange={(e) => setTool1Id(e.target.value)}
+              className="w-full rounded-xl border border-slate-700 bg-slate-900 p-4 text-white outline-none focus:border-cyan-400"
+            >
+              <option value="">
+                Select First Tool
               </option>
-            ))}
-          </select>
 
-          <select
-            value={tool2}
-            onChange={(e) => setTool2(e.target.value)}
-            className="rounded-xl border border-slate-700 bg-slate-900 p-4 text-white outline-none focus:border-cyan-400"
-          >
-            <option value="">Select Second Tool</option>
+              {tools.map((tool) => (
+                <option key={tool.id} value={String(tool.id)}>
+                  {tool.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
-            {tools.map((tool) => (
-              <option key={tool.id} value={tool.name}>
-                {tool.name}
+          {/* Second Tool */}
+          <div>
+            <label
+              htmlFor="second-tool"
+              className="mb-2 block text-sm font-semibold text-slate-300"
+            >
+              Select Second Tool
+            </label>
+
+            <select
+              id="second-tool"
+              value={tool2Id}
+              onChange={(e) => setTool2Id(e.target.value)}
+              className="w-full rounded-xl border border-slate-700 bg-slate-900 p-4 text-white outline-none focus:border-cyan-400"
+            >
+              <option value="">
+                Select Second Tool
               </option>
-            ))}
-          </select>
 
+              {tools.map((tool) => (
+                <option
+                  key={tool.id}
+                  value={String(tool.id)}
+                  disabled={String(tool.id) === tool1Id}
+                >
+                  {tool.name}
+                  {String(tool.id) === tool1Id
+                    ? " (Already Selected)"
+                    : ""}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
+
+        {/* Selected Tools */}
+        {(firstTool || secondTool) && (
+          <div className="mb-8 grid gap-4 md:grid-cols-2">
+
+            <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+              <p className="text-sm text-slate-400">
+                First Tool
+              </p>
+
+              <p className="mt-1 text-lg font-bold text-cyan-400">
+                {firstTool ? firstTool.name : "Not selected"}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+              <p className="text-sm text-slate-400">
+                Second Tool
+              </p>
+
+              <p className="mt-1 text-lg font-bold text-cyan-400">
+                {secondTool ? secondTool.name : "Not selected"}
+              </p>
+            </div>
+
+          </div>
+        )}
 
         {/* Comparison */}
         {firstTool && secondTool ? (
           <div className="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
 
-            <table className="w-full border-collapse">
+            <table className="w-full min-w-[800px] border-collapse">
 
               <thead>
                 <tr className="bg-slate-800">
@@ -75,11 +139,11 @@ export default function ComparePage() {
                     Feature
                   </th>
 
-                  <th className="border border-slate-700 p-4">
+                  <th className="border border-slate-700 p-4 text-center">
                     {firstTool.name}
                   </th>
 
-                  <th className="border border-slate-700 p-4">
+                  <th className="border border-slate-700 p-4 text-center">
                     {secondTool.name}
                   </th>
 
@@ -226,7 +290,6 @@ export default function ComparePage() {
                 </tr>
 
               </tbody>
-
             </table>
           </div>
         ) : (
@@ -241,8 +304,8 @@ export default function ComparePage() {
             </h2>
 
             <p className="mt-2 text-slate-400">
-              Choose two tools above to compare their features, pricing,
-              ratings and more.
+              Choose two different tools above to compare their features,
+              pricing, ratings and more.
             </p>
 
           </div>
