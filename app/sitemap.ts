@@ -1,36 +1,50 @@
 import { MetadataRoute } from "next";
+import { tools } from "./data/tools";
+
+const baseUrl = "https://toolnova-roan.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    return [
-        {
-            url: "https://toolnova.com",
-            lastModified: new Date(),
-            changeFrequency: "daily",
-            priority: 1,
-        },
-        {
-            url: "https://toolnova.com/categories",
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.8,
-        },
-        {
-            url: "https://toolnova.com/compare",
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.8,
-        },
-        {
-            url: "https://toolnova.com/about",
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.6,
-        },
-        {
-            url: "https://toolnova.com/contact",
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.6,
-        },
-    ];
+  const toolPages = tools.map((tool) => ({
+    url: `${baseUrl}/tools/${tool.name
+      .toLowerCase()
+      .replace(/\s+/g, "-")}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/categories`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+
+    ...toolPages,
+  ];
 }
