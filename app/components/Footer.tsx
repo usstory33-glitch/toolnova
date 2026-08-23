@@ -69,6 +69,13 @@ export default function Footer() {
           >
             Contact
           </Link>
+
+          <Link
+            href="/privacy-policy"
+            className="transition hover:text-cyan-400"
+          >
+            Privacy Policy
+          </Link>
         </div>
 
       </div>
