@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ToolCard from "./components/ToolCard";
@@ -13,6 +13,16 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [sortBy, setSortBy] = useState("default");
+
+  // Read category from the URL when the page opens.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlCategory = params.get("category");
+
+    if (urlCategory) {
+      setCategory(urlCategory);
+    }
+  }, []);
 
   return (
     <main
