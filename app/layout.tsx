@@ -42,13 +42,13 @@ export const metadata: Metadata = {
 
   creator: "ToolNova",
 
-  metadataBase: new URL("https://toolnova.com"),
+  metadataBase: new URL("https://toolnova-roan.vercel.app"),
 
   openGraph: {
     title: "ToolNova - Best AI Tools Directory",
     description:
       "Compare and discover the best AI tools in one place.",
-    url: "https://toolnova.com",
+    url: "https://toolnova-roan.vercel.app",
     siteName: "ToolNova",
     locale: "en_US",
     type: "website",
