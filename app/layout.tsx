@@ -78,6 +78,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-6965283409934734"
+        />
+      </head>
+
       <body className="min-h-full flex flex-col">
         <Script
           async
