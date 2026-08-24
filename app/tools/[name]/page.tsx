@@ -30,10 +30,10 @@ export async function generateMetadata({
 
   const toolUrl = `${baseUrl}/tools/${createToolSlug(tool.name)}`;
 
-  const description = `${tool.description} Explore features, pricing, rating, users and more on ToolNova.`;
+ const description = `${tool.description} Explore features, pricing, ratings, users, and key capabilities on ToolNova.`;
 
   return {
-    title: `${tool.name} - AI Tool`,
+   title: `${tool.name} - Features, Pricing & Review`,
     description,
 
     alternates: {
@@ -117,7 +117,7 @@ export default async function ToolPage({
             <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-white p-3">
               <img
                 src={tool.logo}
-                alt={`${tool.name} logo`}
+                alt={`${tool.name} AI tool logo`}
                 className="h-14 w-14 object-contain"
               />
             </div>

@@ -9,7 +9,8 @@ editorsChoice: true,
 category: "AI Writing",
 rating: "4.9",
 users: "2M+",
-description: "AI assistant for writing, coding and learning.",
+description:
+  "AI assistant for writing, coding, research, learning, and everyday tasks.",
 website: "https://chatgpt.com",
 pricing: "Free & Paid",
 features: [
@@ -29,7 +30,8 @@ features: [
     category: "AI Writing",
     rating: "4.9",
     users: "2M+",
-    description: "Advanced AI assistant for long-form content.",
+   description:
+  "Advanced AI assistant for writing, research, analysis, coding, and long-form content.",
     website: "https://claude.ai",
     pricing: "Free & Paid",
     features: [
@@ -49,7 +51,8 @@ features: [
     category: "AI Image",
     rating: "4.9",
     users: "2M+",
-    description: "Generate high-quality AI images.",
+    description:
+  "AI image generator for creating high-quality artwork, illustrations, and creative visuals.",
     website: "https://www.midjourney.com",
     pricing: "Paid",
     features: [
@@ -69,7 +72,8 @@ features: [
     category: "AI Video",
     rating: "4.8",
     users: "1.5M+",
-    description: "Create and edit AI videos.",
+   description:
+  "AI video creation and editing platform for generating videos, visual effects, and creative content.",
     website: "https://runwayml.com",
     pricing: "Free & Paid",
     features: [
@@ -89,9 +93,10 @@ features: [
     category: "AI Audio",
     rating: "4.8",
     users: "1M+",
-    description: "Realistic AI voice generation.",
+    description:
+  "AI voice platform for realistic text-to-speech, voice generation, dubbing, and voice cloning.",
     website: "https://elevenlabs.io",
-    pricing: "Free &Paid",
+    pricing: "Free & Paid",
     features: [
       "Text to Speech",
       "Voice Cloning",
@@ -109,7 +114,8 @@ features: [
     category: "AI Coding",
     rating: "4.7",
     users: "1.3M+",
-    description: "AI coding assistant for developers.",
+    description:
+  "AI coding assistant that helps developers write, understand, improve, and debug code.",
     website: "https://github.com/features/copilot",
     pricing: "Paid",
     features: [

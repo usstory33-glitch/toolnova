@@ -26,7 +26,7 @@ setSortBy,
           color: "var(--primary)",
         }}
       >
-        🚀 #1 AI Tools Directory
+        🚀 AI Tools Directory
       </span>
 
       <h1
@@ -42,14 +42,14 @@ setSortBy,
         </span>
       </h1>
 
-      <p
-        className="mx-auto mt-6 max-w-2xl px-2 text-base sm:text-lg"
-        style={{ color: "var(--muted)" }}
-      >
-        Discover, compare and explore the best AI tools for writing, coding,
-        image generation, video editing, audio creation and productivity —
-        all in one place.
-      </p>
+<p
+  className="mx-auto mt-6 max-w-2xl px-2 text-base sm:text-lg"
+  style={{ color: "var(--muted)" }}
+>
+  Discover, compare, and explore the best AI tools for writing, coding,
+  image generation, video creation, audio, and productivity. Find the right
+  AI tool for your needs in one place.
+</p>
 
       <div className="mx-auto mt-10 flex max-w-2xl flex-col gap-4 sm:flex-row">
         <input

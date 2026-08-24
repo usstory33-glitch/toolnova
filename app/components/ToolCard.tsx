@@ -196,7 +196,7 @@ export default function ToolCard({
                 <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
                   <img
                     src={tool.logo}
-                    alt={tool.name}
+                    alt={`${tool.name} AI tool logo`}
                     className="h-10 w-10 object-contain"
                   />
                 </div>

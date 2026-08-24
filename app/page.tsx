@@ -46,7 +46,7 @@ export default function Home() {
       {/* Stats */}
       <section className="mx-auto mt-10 mb-12 grid max-w-6xl gap-6 px-6 md:grid-cols-2 lg:grid-cols-4">
         {[
-          ["6+", "AI Tools"],
+          ["6", "AI Tools"],
           ["5", "Categories"],
           ["Free & Paid", "Tools"],
           ["Regularly", "Updated"],
@@ -111,7 +111,7 @@ export default function Home() {
               className="rounded-full border px-3 py-1 text-sm"
               style={{ borderColor: "var(--border)" }}
             >
-              6 Tools Available
+              6 AI Tools Available
             </span>
           </div>
         </div>
