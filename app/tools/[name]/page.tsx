@@ -315,7 +315,7 @@ export default async function ToolPage({
                 </span>
               ))}
             </div>
-          </section>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+          </section>
           {/* Official Website */}
           <a
             href={tool.website}
