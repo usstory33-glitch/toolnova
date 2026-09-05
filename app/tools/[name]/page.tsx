@@ -143,7 +143,52 @@ export default async function ToolPage({
           <p className="mt-5 text-lg text-slate-300">
             {tool.description}
           </p>
+{/* Detailed Overview */}
+<section className="mt-10">
+  <h2 className="mb-4 text-2xl font-bold">
+    About {tool.name}
+  </h2>
 
+  <p className="leading-8 text-slate-300">
+    {tool.overview}
+  </p>
+</section>
+
+{/* Use Cases */}
+<section className="mt-10">
+  <h2 className="mb-4 text-2xl font-bold">
+    What Can You Use {tool.name} For?
+  </h2>
+
+  <div className="grid gap-3">
+    {tool.useCases.map((useCase) => (
+      <div
+        key={useCase}
+        className="rounded-xl border border-slate-700 bg-slate-800 p-4 text-slate-300"
+      >
+        ✅ {useCase}
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* Best For */}
+<section className="mt-10">
+  <h2 className="mb-4 text-2xl font-bold">
+    Who Should Use {tool.name}?
+  </h2>
+
+  <div className="flex flex-wrap gap-3">
+    {tool.bestFor.map((user) => (
+      <span
+        key={user}
+        className="rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-400"
+      >
+        {user}
+      </span>
+    ))}
+  </div>
+</section>
           {/* Category + Pricing */}
           <div className="mt-6 flex flex-wrap gap-3">
 
@@ -180,7 +225,97 @@ export default async function ToolPage({
             ))}
 
           </div>
+          {/* Pros & Cons */}
+          <section className="mt-10 grid gap-6 md:grid-cols-2">
 
+            {/* Pros */}
+            <div>
+              <h2 className="mb-4 text-2xl font-bold">
+                👍 Pros
+              </h2>
+
+              <div className="grid gap-3">
+                {tool.pros.map((pro) => (
+                  <div
+                    key={pro}
+                    className="rounded-xl border border-slate-700 bg-slate-800 p-4 text-slate-300"
+                  >
+                    ✅ {pro}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Cons */}
+            <div>
+              <h2 className="mb-4 text-2xl font-bold">
+                👎 Cons
+              </h2>
+
+              <div className="grid gap-3">
+                {tool.cons.map((con) => (
+                  <div
+                    key={con}
+                    className="rounded-xl border border-slate-700 bg-slate-800 p-4 text-slate-300"
+                  >
+                    ⚠️ {con}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </section>
+
+          {/* Pricing Details */}
+          <section className="mt-10">
+            <h2 className="mb-4 text-2xl font-bold">
+              Pricing Details
+            </h2>
+
+            <p className="leading-8 text-slate-300">
+              {tool.pricingDetails}
+            </p>
+         </section>
+                   {/* FAQ */}
+          <section className="mt-10">
+            <h2 className="mb-6 text-2xl font-bold">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="grid gap-4">
+              {tool.faq.map((item) => (
+                <div
+                  key={item.question}
+                  className="rounded-xl border border-slate-700 bg-slate-800 p-5"
+                >
+                  <h3 className="font-semibold text-white">
+                    {item.question}
+                  </h3>
+
+                  <p className="mt-2 leading-7 text-slate-400">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+                    {/* Alternatives */}
+          <section className="mt-10">
+            <h2 className="mb-6 text-2xl font-bold">
+              Alternatives to {tool.name}
+            </h2>
+
+            <div className="flex flex-wrap gap-3">
+              {tool.alternatives.map((alternative) => (
+                <span
+                  key={alternative}
+                  className="rounded-full border border-slate-700 bg-slate-800 px-4 py-2 text-cyan-400"
+                >
+                  {alternative}
+                </span>
+              ))}
+            </div>
+          </section>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
           {/* Official Website */}
           <a
             href={tool.website}
