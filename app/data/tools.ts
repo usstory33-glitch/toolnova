@@ -90,7 +90,7 @@ export const tools = [
       },
     ],
 
-    alternatives: ["Claude", "GitHub Copilot"],
+    alternatives: ["Claude", "Gemini"],
 
     features: [
       "Content Writing",
@@ -191,7 +191,7 @@ export const tools = [
       },
     ],
 
-    alternatives: ["ChatGPT", "GitHub Copilot"],
+    alternatives: ["ChatGPT", "Gemini"],
 
     features: [
       "Long-form Writing",
@@ -293,7 +293,7 @@ export const tools = [
       },
     ],
 
-    alternatives: ["Runway", "ChatGPT"],
+    alternatives: ["Leonardo AI", "Canva AI"],
 
     features: [
       "AI Art",
@@ -394,7 +394,7 @@ export const tools = [
       },
     ],
 
-    alternatives: ["Midjourney", "ElevenLabs"],
+    alternatives: ["Descript", "Midjourney"],
 
     features: [
       "Video Editing",
@@ -495,7 +495,7 @@ export const tools = [
       },
     ],
 
-    alternatives: ["Runway", "ChatGPT"],
+    alternatives: ["Descript", "Runway"],
 
     features: [
       "Text to Speech",
@@ -604,6 +604,612 @@ export const tools = [
       "Bug Fixing",
       "Code Suggestions",
       "Documentation",
+    ],
+  },
+
+  {
+    id: 7,
+    name: "Perplexity",
+    logo: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128",
+    featured: true,
+    popular: true,
+    editorsChoice: true,
+    category: "AI Writing",
+    rating: "4.8",
+    users: "10M+",
+    description:
+      "AI-powered search and research assistant for finding information and exploring topics.",
+    website: "https://www.perplexity.ai",
+    pricing: "Free & Paid",
+
+    overview:
+      "Perplexity is an AI-powered search and research platform designed to help users explore questions and topics through conversational searches. It can be useful for researching subjects, comparing information, and discovering sources.",
+
+    useCases: [
+      "Researching topics and questions",
+      "Finding information quickly",
+      "Comparing different ideas",
+      "Exploring current topics",
+      "Creating research summaries",
+    ],
+
+    bestFor: [
+      "Students",
+      "Researchers",
+      "Writers",
+      "Professionals",
+      "People who want AI-assisted search",
+    ],
+
+    pros: [
+      "Combines search with AI responses",
+      "Useful for research workflows",
+      "Helpful for exploring unfamiliar topics",
+      "Conversational search experience",
+    ],
+
+    cons: [
+      "Important information should still be verified",
+      "Some advanced capabilities may require a paid plan",
+      "Search results can vary depending on the query",
+    ],
+
+    pricingDetails:
+      "Perplexity offers free access along with paid options that provide additional capabilities. Current plans and limits should be checked on the official website.",
+
+    featureDetails: [
+      {
+        name: "AI Search",
+        description:
+          "Uses AI-assisted search to help users explore questions and find relevant information.",
+      },
+      {
+        name: "Research",
+        description:
+          "Helps users investigate topics and organize information for research workflows.",
+      },
+      {
+        name: "Question Answering",
+        description:
+          "Provides conversational answers to questions while helping users explore related information.",
+      },
+      {
+        name: "Source Discovery",
+        description:
+          "Helps users discover sources and information related to their searches.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Perplexity used for?",
+        answer:
+          "Perplexity can be used for AI-assisted search, research, question answering, and exploring information.",
+      },
+      {
+        question: "Is Perplexity free?",
+        answer:
+          "Perplexity offers a free option as well as paid plans with additional capabilities.",
+      },
+      {
+        question: "Is Perplexity useful for research?",
+        answer:
+          "Yes. It can help users explore topics, find information, and organize research material.",
+      },
+    ],
+
+    alternatives: ["ChatGPT", "Gemini"],
+
+    features: [
+      "AI Search",
+      "Research",
+      "Question Answering",
+      "Source Discovery",
+    ],
+  },
+
+  {
+    id: 8,
+    name: "Canva AI",
+    logo: "https://www.google.com/s2/favicons?domain=canva.com&sz=128",
+    featured: true,
+    popular: true,
+    editorsChoice: true,
+    category: "AI Image",
+    rating: "4.7",
+    users: "170M+",
+    description:
+      "AI-powered design tools for creating graphics, presentations, images, and visual content.",
+    website: "https://www.canva.com",
+    pricing: "Free & Paid",
+
+    overview:
+      "Canva is a visual design platform that includes AI-powered features for creating and editing graphics, presentations, social media content, and other visual materials. It is designed to make visual content creation accessible to a wide range of users.",
+
+    useCases: [
+      "Creating social media graphics",
+      "Designing presentations",
+      "Creating posters and flyers",
+      "Generating visual content",
+      "Editing images and designs",
+    ],
+
+    bestFor: [
+      "Students",
+      "Content creators",
+      "Small businesses",
+      "Marketers",
+      "Design beginners",
+    ],
+
+    pros: [
+      "Easy-to-use design interface",
+      "Large range of design templates",
+      "Useful AI-assisted design features",
+      "Suitable for beginners",
+    ],
+
+    cons: [
+      "Some features require a paid plan",
+      "Advanced users may prefer specialized design software",
+      "Available features can change over time",
+    ],
+
+    pricingDetails:
+      "Canva provides free access with paid plans that unlock additional features, assets, and capabilities. Current pricing and plan limits should be checked on the official website.",
+
+    featureDetails: [
+      {
+        name: "AI Design",
+        description:
+          "Helps users create and improve visual designs using AI-assisted tools.",
+      },
+      {
+        name: "Image Creation",
+        description:
+          "Provides tools for creating and working with visual content.",
+      },
+      {
+        name: "Presentations",
+        description:
+          "Helps users create visual presentations and supporting graphics.",
+      },
+      {
+        name: "Social Media Design",
+        description:
+          "Provides templates and design tools for social media content.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Canva AI used for?",
+        answer:
+          "Canva AI can help users create graphics, presentations, images, social media content, and other visual designs.",
+      },
+      {
+        question: "Is Canva free?",
+        answer:
+          "Canva offers free access along with paid plans that provide additional features and resources.",
+      },
+      {
+        question: "Is Canva good for beginners?",
+        answer:
+          "Yes. Canva is designed with an accessible interface that makes visual design easier for beginners.",
+      },
+    ],
+
+    alternatives: ["Midjourney", "Leonardo AI"],
+
+    features: [
+      "AI Design",
+      "Image Creation",
+      "Presentations",
+      "Social Media Design",
+    ],
+  },
+
+  {
+    id: 9,
+    name: "Gemini",
+    logo: "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128",
+    featured: true,
+    popular: true,
+    editorsChoice: true,
+    category: "AI Writing",
+    rating: "4.8",
+    users: "10M+",
+    description:
+      "Google AI assistant for writing, learning, brainstorming, coding, and everyday tasks.",
+    website: "https://gemini.google.com",
+    pricing: "Free & Paid",
+
+    overview:
+      "Gemini is an AI assistant from Google that can help users with writing, brainstorming, learning, coding, summarization, and other information-based tasks. It is designed for both everyday users and people working with more advanced AI-assisted workflows.",
+
+    useCases: [
+      "Writing and editing content",
+      "Learning and explaining concepts",
+      "Brainstorming ideas",
+      "Getting help with coding",
+      "Summarizing information",
+    ],
+
+    bestFor: [
+      "Students",
+      "Writers",
+      "Developers",
+      "Professionals",
+      "Everyday AI users",
+    ],
+
+    pros: [
+      "Wide range of everyday use cases",
+      "Useful for writing and learning",
+      "Can assist with coding",
+      "Simple conversational workflow",
+    ],
+
+    cons: [
+      "AI responses may need verification",
+      "Some features depend on plan or availability",
+      "Capabilities can change over time",
+    ],
+
+    pricingDetails:
+      "Gemini provides free access with additional capabilities available through paid options. Current features and plan limits should be checked on the official Google website.",
+
+    featureDetails: [
+      {
+        name: "Writing",
+        description:
+          "Helps users draft, rewrite, summarize, and improve written content.",
+      },
+      {
+        name: "Learning",
+        description:
+          "Can explain concepts and help users explore educational topics.",
+      },
+      {
+        name: "Coding",
+        description:
+          "Can help explain programming concepts and work through coding tasks.",
+      },
+      {
+        name: "Brainstorming",
+        description:
+          "Helps users generate ideas, outlines, and possible approaches to problems.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Gemini used for?",
+        answer:
+          "Gemini can help with writing, learning, brainstorming, coding, summarization, and everyday information-based tasks.",
+      },
+      {
+        question: "Is Gemini free?",
+        answer:
+          "Gemini has free access options, with additional capabilities available through paid plans.",
+      },
+      {
+        question: "Can Gemini help with coding?",
+        answer:
+          "Yes. Gemini can explain programming concepts and assist with coding-related tasks.",
+      },
+    ],
+
+    alternatives: ["ChatGPT", "Claude"],
+
+    features: [
+      "Writing",
+      "Learning",
+      "Coding",
+      "Brainstorming",
+    ],
+  },
+
+  {
+    id: 10,
+    name: "Notion AI",
+    logo: "https://www.google.com/s2/favicons?domain=notion.so&sz=128",
+    featured: false,
+    popular: true,
+    editorsChoice: true,
+    category: "AI Writing",
+    rating: "4.6",
+    users: "5M+",
+    description:
+      "AI-powered workspace features for writing, summarizing, organizing, and managing information.",
+    website: "https://www.notion.so/product/ai",
+    pricing: "Free & Paid",
+
+    overview:
+      "Notion AI adds AI-powered capabilities to the Notion workspace. It can help users write and edit content, summarize information, organize notes, and work with knowledge inside their workspace.",
+
+    useCases: [
+      "Writing and editing notes",
+      "Summarizing documents",
+      "Creating project content",
+      "Organizing information",
+      "Generating ideas and outlines",
+    ],
+
+    bestFor: [
+      "Students",
+      "Writers",
+      "Project teams",
+      "Knowledge workers",
+      "Productivity-focused users",
+    ],
+
+    pros: [
+      "Integrated into a productivity workspace",
+      "Useful for organizing information",
+      "Helpful for writing and summaries",
+      "Supports collaborative workflows",
+    ],
+
+    cons: [
+      "Some AI features require paid access",
+      "Best suited to users already using a workspace",
+      "AI output should still be reviewed",
+    ],
+
+    pricingDetails:
+      "Notion provides workspace plans with AI capabilities that may depend on the selected plan. Current pricing and AI availability should be checked on the official website.",
+
+    featureDetails: [
+      {
+        name: "AI Writing",
+        description:
+          "Helps users draft, rewrite, improve, and organize written content.",
+      },
+      {
+        name: "Summarization",
+        description:
+          "Can create shorter summaries from notes and longer pieces of information.",
+      },
+      {
+        name: "Workspace Assistance",
+        description:
+          "Provides AI assistance within a workspace for information and productivity tasks.",
+      },
+      {
+        name: "Brainstorming",
+        description:
+          "Can help generate ideas, outlines, and starting points for projects.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Notion AI used for?",
+        answer:
+          "Notion AI can help with writing, summarization, brainstorming, organization, and productivity tasks inside Notion.",
+      },
+      {
+        question: "Is Notion AI free?",
+        answer:
+          "Notion offers different plans and AI availability can depend on the selected plan.",
+      },
+      {
+        question: "Who should use Notion AI?",
+        answer:
+          "It can be useful for students, writers, project teams, professionals, and people who organize information in Notion.",
+      },
+    ],
+
+    alternatives: ["ChatGPT", "Claude"],
+
+    features: [
+      "AI Writing",
+      "Summarization",
+      "Workspace Assistance",
+      "Brainstorming",
+    ],
+  },
+
+  {
+    id: 11,
+    name: "Descript",
+    logo: "https://www.google.com/s2/favicons?domain=descript.com&sz=128",
+    featured: false,
+    popular: true,
+    editorsChoice: false,
+    category: "AI Audio",
+    rating: "4.6",
+    users: "1M+",
+    description:
+      "AI-powered audio and video editor for podcasts, videos, transcripts, and content creation.",
+    website: "https://www.descript.com",
+    pricing: "Free & Paid",
+
+    overview:
+      "Descript is a media editing platform designed for audio and video workflows. It combines transcription with editing tools and AI-assisted features that can help creators produce podcasts, videos, and other media content.",
+
+    useCases: [
+      "Editing podcasts",
+      "Creating and editing videos",
+      "Generating transcripts",
+      "Cleaning up recorded content",
+      "Creating content from spoken recordings",
+    ],
+
+    bestFor: [
+      "Podcasters",
+      "YouTubers",
+      "Video creators",
+      "Content teams",
+      "Media professionals",
+    ],
+
+    pros: [
+      "Combines transcription and media editing",
+      "Useful for podcast workflows",
+      "Supports video and audio projects",
+      "Designed for content creators",
+    ],
+
+    cons: [
+      "Some advanced features require paid access",
+      "Media editing can require learning the workflow",
+      "AI-generated results should be reviewed",
+    ],
+
+    pricingDetails:
+      "Descript offers free and paid plans with different editing and AI capabilities. Current plans and usage limits should be checked on the official website.",
+
+    featureDetails: [
+      {
+        name: "Transcription",
+        description:
+          "Converts recorded speech into text that can be used during editing workflows.",
+      },
+      {
+        name: "Video Editing",
+        description:
+          "Provides tools for editing video content alongside transcripts and audio.",
+      },
+      {
+        name: "Podcast Editing",
+        description:
+          "Helps creators edit and prepare podcast and spoken-audio content.",
+      },
+      {
+        name: "AI Editing",
+        description:
+          "Provides AI-assisted tools for improving and working with recorded media.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Descript used for?",
+        answer:
+          "Descript is used for audio and video editing, transcription, podcasts, and other content creation workflows.",
+      },
+      {
+        question: "Does Descript have a free plan?",
+        answer:
+          "Descript offers free and paid options with different features and usage limits.",
+      },
+      {
+        question: "Is Descript useful for podcasts?",
+        answer:
+          "Yes. Descript provides transcription and editing tools that can be useful for podcast production.",
+      },
+    ],
+
+    alternatives: ["Runway", "ElevenLabs"],
+
+    features: [
+      "Transcription",
+      "Video Editing",
+      "Podcast Editing",
+      "AI Editing",
+    ],
+  },
+
+  {
+    id: 12,
+    name: "Leonardo AI",
+    logo: "https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128",
+    featured: true,
+    popular: true,
+    editorsChoice: true,
+    category: "AI Image",
+    rating: "4.7",
+    users: "20M+",
+    description:
+      "AI image generation platform for creating artwork, illustrations, concepts, and visual assets.",
+    website: "https://leonardo.ai",
+    pricing: "Free & Paid",
+
+    overview:
+      "Leonardo AI is an AI-powered image generation platform designed for creating visual assets, artwork, illustrations, and creative concepts. It can be useful for designers, artists, game creators, and content creators.",
+
+    useCases: [
+      "Generating AI images",
+      "Creating illustrations",
+      "Developing visual concepts",
+      "Creating game and creative assets",
+      "Exploring different visual styles",
+    ],
+
+    bestFor: [
+      "Digital artists",
+      "Designers",
+      "Game creators",
+      "Content creators",
+      "Creative professionals",
+    ],
+
+    pros: [
+      "Focused on AI image generation",
+      "Useful for creative projects",
+      "Supports visual experimentation",
+      "Suitable for different types of creators",
+    ],
+
+    cons: [
+      "Some capabilities require paid access",
+      "Image quality depends on prompts and settings",
+      "Generated images may require multiple attempts",
+    ],
+
+    pricingDetails:
+      "Leonardo AI offers free and paid options with different features and usage limits. Current plans should be checked on the official website.",
+
+    featureDetails: [
+      {
+        name: "AI Image Generation",
+        description:
+          "Creates visual content from user-provided prompts and creative directions.",
+      },
+      {
+        name: "Creative Assets",
+        description:
+          "Can help create visual assets for creative and design projects.",
+      },
+      {
+        name: "Illustration",
+        description:
+          "Useful for generating illustrated and stylized visual concepts.",
+      },
+      {
+        name: "Concept Creation",
+        description:
+          "Helps users explore ideas and visual directions for creative projects.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Leonardo AI used for?",
+        answer:
+          "Leonardo AI can be used for generating artwork, illustrations, concepts, and other AI-generated visual assets.",
+      },
+      {
+        question: "Is Leonardo AI free?",
+        answer:
+          "Leonardo AI offers free and paid options with different capabilities and usage limits.",
+      },
+      {
+        question: "Who should use Leonardo AI?",
+        answer:
+          "It can be useful for artists, designers, game creators, content creators, and other visual professionals.",
+      },
+    ],
+
+    alternatives: ["Midjourney", "Canva AI"],
+
+    features: [
+      "AI Image Generation",
+      "Creative Assets",
+      "Illustration",
+      "Concept Creation",
     ],
   },
 ];
