@@ -10,16 +10,18 @@ type Review = {
 };
 
 export default function ReviewSection() {
- const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   const [name, setName] = useState("");
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
-const averageRating =
-  reviews.length > 0
-    ? reviews.reduce((sum, review) => sum + review.rating, 0) /
-      reviews.length
-    : 0;
+
+  const averageRating =
+    reviews.length > 0
+      ? reviews.reduce((sum, review) => sum + review.rating, 0) /
+        reviews.length
+      : 0;
+
   const addReview = () => {
     if (!name.trim() || !comment.trim()) return;
 
@@ -40,26 +42,27 @@ const averageRating =
 
   return (
     <section className="mt-12">
-<div className="mb-6 flex items-center justify-between">
-  <h2 className="text-3xl font-bold">
-    ⭐ User Reviews
-  </h2>
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-3xl font-bold">
+          ⭐ User Reviews
+        </h2>
 
-  {reviews.length > 0 ? (
-  <p className="text-xl font-bold text-yellow-400">
-    ⭐ {averageRating.toFixed(1)} / 5
-  </p>
-) : (
-  <p className="text-sm text-slate-400">
-    No reviews yet
-  </p>
-)}
+        <div className="text-right">
+          {reviews.length > 0 ? (
+            <p className="text-xl font-bold text-yellow-400">
+              ⭐ {averageRating.toFixed(1)} / 5
+            </p>
+          ) : (
+            <p className="text-sm text-slate-400">
+              No reviews yet
+            </p>
+          )}
 
-    <p className="text-sm text-slate-400">
-      {reviews.length} Reviews
-    </p>
-  </div>
-</div>
+          <p className="text-sm text-slate-400">
+            {reviews.length} Reviews
+          </p>
+        </div>
+      </div>
 
       <div className="mb-8 rounded-2xl border border-slate-700 bg-slate-900 p-6">
         <input
