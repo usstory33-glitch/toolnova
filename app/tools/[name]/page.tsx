@@ -313,12 +313,12 @@ export default async function ToolPage({
 
             <div className="flex flex-wrap gap-3">
               {tool.alternatives.map((alternative) => (
-                <span
-                  key={alternative}
-                  className="rounded-full border border-slate-700 bg-slate-800 px-4 py-2 text-cyan-400"
-                >
-                  {alternative}
-                </span>
+                <div
+  key={alternative}
+  className="rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-cyan-400"
+>
+  {alternative}
+</div>
               ))}
             </div>
           </section>
