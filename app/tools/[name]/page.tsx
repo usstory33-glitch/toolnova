@@ -311,7 +311,7 @@ export default async function ToolPage({
               Alternatives to {tool.name}
             </h2>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="grid gap-3 sm:grid-cols-2">
               {tool.alternatives.map((alternative) => (
                 <span
                   key={alternative}
