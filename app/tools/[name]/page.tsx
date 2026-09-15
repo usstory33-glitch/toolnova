@@ -209,20 +209,26 @@ export default async function ToolPage({
 
           <div className="mt-4 grid gap-3">
 
-            {tool.features.map((feature) => (
-              <div
-                key={feature}
-                className="flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-800 p-4 transition hover:border-cyan-400 hover:bg-slate-700"
-              >
-                <span className="text-green-400">
-                  ✅
-                </span>
+          {tool.featureDetails.map((feature) => (
+  <div
+    key={feature.name}
+    className="rounded-xl border border-slate-700 bg-slate-800 p-5 transition hover:border-cyan-400 hover:bg-slate-700"
+  >
+    <div className="flex items-center gap-3">
+      <span className="text-green-400">
+        ✅
+      </span>
 
-                <span>
-                  {feature}
-                </span>
-              </div>
-            ))}
+      <h3 className="font-semibold text-white">
+        {feature.name}
+      </h3>
+    </div>
+
+    <p className="mt-2 leading-7 text-slate-400">
+      {feature.description}
+    </p>
+  </div>
+))}
 
           </div>
           {/* Pros & Cons */}
