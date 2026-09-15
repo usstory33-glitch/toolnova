@@ -180,12 +180,12 @@ export default async function ToolPage({
 
   <div className="grid gap-3 sm:grid-cols-2">
     {tool.bestFor.map((user) => (
-      <span
-        key={user}
-        className="rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-400"
-      >
-        {user}
-      </span>
+     <div
+  key={user}
+  className="rounded-xl border border-cyan-500/20 bg-cyan-500/10 px-4 py-3 text-cyan-400"
+>
+  {user}
+</div>
     ))}
   </div>
 </section>
