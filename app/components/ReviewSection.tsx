@@ -10,27 +10,16 @@ type Review = {
 };
 
 export default function ReviewSection() {
-  const [reviews, setReviews] = useState<Review[]>([
-    {
-      id: 1,
-      name: "Ali",
-      rating: 5,
-      comment: "Excellent AI tool. Highly recommended!",
-    },
-    {
-      id: 2,
-      name: "Ahmed",
-      rating: 4,
-      comment: "Very useful and easy to use.",
-    },
-  ]);
+ const [reviews, setReviews] = useState<Review[]>([]);
 
   const [name, setName] = useState("");
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
 const averageRating =
-  reviews.reduce((sum, review) => sum + review.rating, 0) /
-  reviews.length;
+  reviews.length > 0
+    ? reviews.reduce((sum, review) => sum + review.rating, 0) /
+      reviews.length
+    : 0;
   const addReview = () => {
     if (!name.trim() || !comment.trim()) return;
 
