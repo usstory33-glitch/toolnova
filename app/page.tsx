@@ -164,13 +164,19 @@ export default function Home() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             {[
-              "ChatGPT",
-              "Claude",
-              "Midjourney",
-              "Runway",
-              "ElevenLabs",
-              "GitHub Copilot",
-            ].map((tool) => (
+  "ChatGPT",
+  "Claude",
+  "Midjourney",
+  "Runway",
+  "ElevenLabs",
+  "GitHub Copilot",
+  "Perplexity",
+  "Canva AI",
+  "Gemini",
+  "Notion AI",
+  "Descript",
+  "Leonardo AI",
+].map((tool) => (
               <span
                 key={tool}
                 className="rounded-full border px-4 py-2"
