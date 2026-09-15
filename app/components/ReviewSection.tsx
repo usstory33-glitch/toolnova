@@ -45,10 +45,15 @@ const averageRating =
     ⭐ User Reviews
   </h2>
 
-  <div className="text-right">
-    <p className="text-xl font-bold text-yellow-400">
-      ⭐ {averageRating.toFixed(1)} / 5
-    </p>
+  {reviews.length > 0 ? (
+  <p className="text-xl font-bold text-yellow-400">
+    ⭐ {averageRating.toFixed(1)} / 5
+  </p>
+) : (
+  <p className="text-sm text-slate-400">
+    No reviews yet
+  </p>
+)}
 
     <p className="text-sm text-slate-400">
       {reviews.length} Reviews
